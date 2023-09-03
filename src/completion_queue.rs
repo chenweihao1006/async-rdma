@@ -17,7 +17,7 @@ use tracing::error;
 
 /// Indicator that `imm_data` is valid.
 /// Relevant for Receive Work Completions.
-pub(crate) static mut IBV_WC_WITH_IMM: u32 = 3;
+pub(crate) static mut IBV_WC_WITH_IMM: u32 = 2;
 
 /// Used to init `IBV_WC_WITH_IMM` only once.
 pub(crate) static INIT_IMM_FLAG: parking_lot::Mutex<bool> = parking_lot::Mutex::new(false);

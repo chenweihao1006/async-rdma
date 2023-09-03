@@ -1008,7 +1008,7 @@ impl RdmaBuilder {
 
     /// Set the immediate data flag in `ibv_wc` of rdma device.
     ///
-    /// This value is `3` as default for `Soft-RoCE`, and may be `2` for other devices.
+    /// This value is `3` for `Soft-RoCE`, and may be `2` for other devices as default.
     #[inline]
     pub fn set_imm_flag_in_wc(self, imm_flag: u32) -> io::Result<Self> {
         use completion_queue::{IBV_WC_WITH_IMM, INIT_IMM_FLAG};
